@@ -99,27 +99,27 @@ const ctx = document.getElementById("myChart").getContext("2d");
 //   }
 
 //logout
-document.getElementById('logout').addEventListener('click', ()=>{
-  const logoutUrl = 'http://ginjar.tech/api/logout';
+// document.getElementById('logout').addEventListener('click', ()=>{
+//   const logoutUrl = 'http://ginjar.tech/api/logout';
 
-  fetch(logoutUrl)
-    .then(res => res.json())
-    .then(data => {
-          console.log(data);
-          if(data.success){
-            sessionStorage.clear('login')
-            location.href = "../index.html"
-          } else {
-            document.getElementById('logout-alert').classList.add('show-logout-alert');
-          }
-      }).catch(error => {
-          console.error('Error:', error)
-          document.getElementById('logout-alert').classList.add('show-logout-alert');
-      })
-})
+//   fetch(logoutUrl)
+//     .then(res => res.json())
+//     .then(data => {
+//           console.log(data);
+//           if(data.success){
+//             sessionStorage.clear('login')
+//             location.href = "../index.html"
+//           } else {
+//             document.getElementById('logout-alert').classList.add('show-logout-alert');
+//           }
+//       }).catch(error => {
+//           console.error('Error:', error)
+//           document.getElementById('logout-alert').classList.add('show-logout-alert');
+//       })
+// })
 
 //close logout-alert
-document.getElementById('close-logout-alert')
-  .addEventListener('click', ()=>{
-      document.getElementById('logout-alert').classList.remove('show-logout-alert');
-  })
+// document.getElementById('close-logout-alert')
+//   .addEventListener('click', ()=>{
+//       document.getElementById('logout-alert').classList.remove('show-logout-alert');
+//   })
