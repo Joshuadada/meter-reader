@@ -1,0 +1,102 @@
+a, a:hover{
+    text-decoration: none;
+}
+.j-align-center{
+    align-items: center;
+}
+.j-justify-center{
+    justify-content: center;
+}
+.j-space-between{
+    justify-content: space-between;
+}
+.j-d-block{
+    display: block;
+}
+.j-d-flex{
+    display: flex;
+}
+.j-d-none{
+    display: none;
+}
+.j-mt-5{
+    margin-top: 15px
+}
+.j-ml-5{
+    margin-left: 5px;
+}
+.j-mb-15{
+    margin-bottom: 15px;
+}
+.j-ml-auto{
+    margin-left: auto;
+}
+.j-ml-20{
+    margin-left: 20px
+}
+.j-ml-10{
+    margin-left: 10px
+}
+.j-my-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+.j-mx-correct{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.j-my-20{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.j-my-30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.j-py-20{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.border{
+    border: 1px solid #000;
+}
+.j-text-light{
+    color: #fff;
+}
+body{
+    scroll-behavior: smooth;
+}
+.logo{
+    width: 60px;
+    height: 30px;
+}
+.j-flex-wrap{
+    flex-wrap: wrap;
+}
+.j-cursor-pointer{
+    cursor: pointer;
+}
+.j-relative{
+    position: relative;
+}
+.j-modal{
+    width: 400px;
+    max-width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -400px;
+    background: #e3e3e3;
+    padding: 30px;
+    resize: none;
+    border-radius: 5px;
+    transition: all ease .3s;
+}
+.show-j-modal{
+    top: 100px;
+}
+@media screen and (max-width: 768px){
+    .j-d-none-tab{
+        display: none;
+    }
+}

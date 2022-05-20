@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script>
+      const item = sessionStorage.getItem('login')
+      if(!item){
+        location.href = "../index.html"
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <title>Dashboard - iobotech Meter</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logout-alert alert alert-danger animate fade-in" id="logout-alert"><span class="close" id="close-logout-alert">x</span>Unable to log you out, please check your internet connection</div>
+      <div class="j-d-flex j-align-center section-1 j-my-20">
+        <a href="dashboard.html"
+          ><img src="../assets/images/logo.png" alt="" class="logo"
+        /></a>
+        <div class="j-d-flex j-ml-auto">
+          <a href="#history" class="j-d-flex j-align-center">
+            <div><i class="fa fa-history" aria-hidden="true"></i></div>
+            <div class="j-ml-5 j-d-none-tab">Transaction History</div>
+          </a>
+          <a href="#chart" class="j-d-flex j-align-center j-ml-20">
+            <div><i class="fa fa-bar-chart" aria-hidden="true"></i></div>
+            <div class="j-ml-5 j-d-none-tab">Consumption Chart</div>
+          </a>
+          <a
+            class="j-d-flex j-align-center j-ml-20 j-cursor-pointer"
+            id="contact"
+          >
+            <div><i class="fa fa-address-book" aria-hidden="true"></i></div>
+            <div class="j-ml-5 j-d-none-tab">Contact Us</div>
+          </a>
+          <a href="profile.html" class="j-d-flex j-align-center j-ml-20">
+            <div><i class="fa fa-user" aria-hidden="true"></i></div>
+            <div class="j-ml-5 j-d-none-tab">My Account</div>
+          </a>
+          <a class="j-d-flex j-align-center j-ml-20 j-cursor-pointer" id="logout">
+            <div><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+            <div class="j-ml-5 j-d-none-tab">Logout</div>
+          </a>
+        </div>
+      </div>
+      <div
+        class="row j-d-flex j-align-center section-2 j-my-30 j-py-20 j-d-flex-mobile-sm"
+      >
+        <div class="col-md-4 j-w-50-mobile j-w-100-mobile-sm">
+          <div class="j-d-flex j-align-center">
+            <img src="../assets/images/user.png" class="user-img" alt="" />
+            <p>JOSHUA BABATUNDE</p>
+          </div>
+        </div>
+        <div class="col-md-3 j-w-50-mobile j-w-100-mobile-sm">
+          <div class="j-d-flex j-align-center j-mb-15">
+            <img src="../assets/images/keypad.png" class="keypad-img" alt="" />
+            <div class="j-ml-10">
+              <div>Meter Number</div>
+              <div>879756778677767</div>
+            </div>
+          </div>
+          <div class="j-d-flex j-align-center">
+            <img
+              src="../assets/images/balance.png"
+              class="balance-img"
+              alt=""
+            />
+            <div class="j-ml-10">
+              <div>Total Credit</div>
+              <div>₦500</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 j-my-auto j-d-none-mobile text-center">
+          <div class="outer-circle j-d-flex j-align-center j-justify-center">
+            <div class="inner-circle j-d-flex j-align-center j-justify-center">
+              <div>
+                <h4>₦400</h4>
+                <p>
+                  Total <br />
+                  Consumption
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 j-d-none-tab">
+          <h4>Available Balance</h4>
+          <p>₦600</p>
+        </div>
+      </div>
+      <div class="section-3 j-my-20">
+        <div class="j-card-container j-mb-15">
+          <div class="bg-primary j-card">
+            <div class="j-d-flex j-align-center j-space-between">
+              <h5>Available Balance</h5>
+              <div><strong>₦600</strong></div>
+            </div>
+          </div>
+          <div class="bg-success j-card">
+            <div class="j-d-flex j-align-center j-space-between">
+              <h5>Last Recharge Unit</h5>
+              <div><strong>₦700</strong></div>
+            </div>
+          </div>
+          <div class="bg-danger j-card">
+            <div class="j-d-flex j-align-center j-space-between">
+              <h5>Cost Per Unit</h5>
+              <div><strong>&#8358;50</strong></div>
+            </div>
+          </div>
+        </div>
+        <div class="j-d-flex j-space-between">
+          <div></div>
+          <button class="btn btn-danger j-ml-auto">Recharge Now</button>
+        </div>
+      </div>
+      <div
+        class="row section-4 j-my-30 table-responsive j-my-auto"
+        id="history"
+      >
+        <div class="j-d-flex j-align-center j-mb-15">
+          <h4><strong>Transaction History</strong></h4>
+          <!-- <div class="j-ml-auto j-d-flex j-align-center"><strong><span>Show All</span> <span>&rightarrow;</span></strong></div> -->
+        </div>
+        <div class="j-table">
+          <table class="table table-striped table-hover col-md-12" id="myTable">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Amount(₦)</th>
+                <th>Unit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>1500</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>2700</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>3200</td>
+                <td>40</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>4300</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>51000</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>6500</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>7700</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>8200</td>
+                <td>40</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>9300</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>1000</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>500</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>700</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>200</td>
+                <td>40</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>300</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>1000</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>500</td>
+                <td>50</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>700</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>200</td>
+                <td>40</td>
+              </tr>
+              <tr>
+                <td scope="row">27/05/2021</td>
+                <td>300</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td scope="row">29/05/2021</td>
+                <td>1000</td>
+                <td>100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- <div class="btn btn-primary" onclick="printChart()">Print</div> -->
+
+      <div class="row section-5 j-my-30" id="chart">
+        <h4 class="j-mb-15"><strong>Consumption Chart</strong></h4>
+        <canvas id="myChart" class="myChart"></canvas>
+      </div>
+
+      <div class="j-my-30 text-center">
+        &copy; Iobotech (2022)
+      </div>
+
+      <div class="j-modal" id="j-modal">
+        <div class="close" id="close-j-modal">x</div>
+        <form action="">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="form-control"
+              placeholder="Enter the title of your message"
+              aria-describedby="helpId"
+            />
+            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <textarea
+              class="form-control"
+              name="subject"
+              id="subject"
+              rows="5"
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-control">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>

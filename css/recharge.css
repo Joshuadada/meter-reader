@@ -1,0 +1,40 @@
+.form-sec{
+  background: #e7e7e7;
+  border-radius: 3%;
+  padding: 2%;
+}
+
+.form-hd{
+  margin-bottom: 2em;
+}
+
+.form-sec:hover{
+  /* border-bottom: 2px solid greenyellow; */
+}
+
+input{
+  border: 0;
+}
+
+.form-cntrl{
+  display: block;
+  background-color: #e7e7e7;
+  border: 0;
+  
+}
+
+.confirm{
+  background: inherit;
+  border: none;
+  width: 100%;
+  border-radius: 5%;
+}
+.btn-conf:hover{
+  background: #3345b7;
+  color: white;
+  border-bottom: 2px solid greenyellow;
+}
+.btn-conf{
+  background: #337AB7;
+  color: #fff;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const item = sessionStorage.getItem('login')
+      if(!item){
+        location.href = "../index.html"
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/logo.png"
+      type="image/x-icon"
+    />
+
+    <title>Acccount Details</title>
+  </head>
+  <body class="j-relative">
+    <div class="container">
+      <div class="j-d-flex j-align-center section-1 j-my-20">
+        <a href="dashboard.html"
+          ><img src="../assets/images/logo.png" alt="" class="logo"
+        /></a>
+        <div class="j-d-flex j-ml-auto">
+          <a href="dashboard.html" class="j-d-flex j-align-center j-ml-20">
+            <div><i class="fa fa-home" aria-hidden="true"></i></div>
+            <div class="j-ml-5 j-d-none-tab">Home</div>
+          </a>
+          <a
+            class="j-d-flex j-align-center j-ml-20 j-cursor-pointer"
+            id="contact"
+          >
+            <div><i class="fa fa-address-book" aria-hidden="true"></i></div>
+            <div class="j-ml-5 j-d-none-tab">Contact Us</div>
+          </a>
+          <a href="profile.html" class="j-d-flex j-align-center j-ml-20">
+            <div><i class="fa fa-user" aria-hidden="true"></i></div>
+            <div class="j-ml-5 j-d-none-tab">My Account</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-section">
+      <div class="container">
+        <div class="j-d-flex j-space-between txt-trans text-danger">
+          <div><strong>My Account</strong></div>
+          <div class="j-cursor-pointer">
+            <span><i class="fa fa-sign-out"></i></span>logout
+          </div>
+        </div>
+        <div class="j-mt-5 row">
+          <div class="col-md-3 col-sm-12">
+            <div>
+              <img
+                src="../assets/images/user.png"
+                alt=""
+                width="150px"
+                style="border-radius: 100%"
+              />
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-12">
+            <div class="row">
+              <h3 class="col-md-12">ABILITY ESSIEN</h3>
+            </div>
+            <div class="j-mt-5 row">
+              <div class="txt-trans col-sm-4">
+                <p class="blu-txt">Mobile Number</p>
+                <p>0901369164</p>
+              </div>
+              <div class="col-sm-4">
+                <p class="txt-trans blu-txt">Email ID</p>
+                <p>joshuababatunde@gmail.com</p>
+              </div>
+              <div class="col-sm-4">
+                <p class="txt-trans blu-txt">METER NUMBER</p>
+                <p>6789564387</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="details j-mt-5 mg-top">
+      <div class="container line">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Change Password</h4>
+          </div>
+          <div class="col-md-4 j-mt-5">
+            <div class="form-group">
+              <label for="oldPassword">Old Password</label>
+              <input
+                type="password"
+                name="oldPassword"
+                id="oldPassword"
+                class="form-control"
+                placeholder="********"
+                aria-describedby="helpId"
+              />
+              <!-- <small id="helpId" class="text-muted">Help text</small> -->
+            </div>
+          </div>
+          <div class="col-md-4 j-mt-5">
+            <div class="form-group">
+              <label for="newPassword">New Password</label>
+              <input
+                type="password"
+                name="newPassword"
+                id="newPassword"
+                class="form-control"
+                placeholder="********"
+                aria-describedby="helpId"
+              />
+              <!-- <small id="helpId" class="text-muted">Help text</small> -->
+            </div>
+          </div>
+          <div class="col-md-4 j-mt-5">
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                class="form-control"
+                placeholder="********"
+                aria-describedby="helpId"
+              />
+              <!-- <small id="helpId" class="text-muted">Help text</small> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 j-mt-5 j-d-flex j-space-between">
+          <div></div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div class="j-my-20 text-center">
+      &copy; Iobotech (2022)
+    </div>
+    <div class="j-modal" id="j-modal">
+      <div class="close" id="close-j-modal">x</div>
+      <form action="">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="form-control"
+            placeholder="Enter the title of your message"
+            aria-describedby="helpId"
+          />
+          <!-- <small id="helpId" class="text-muted">Help text</small> -->
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <textarea
+            class="form-control"
+            name="subject"
+            id="subject"
+            rows="5"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-control">
+          Submit
+        </button>
+      </form>
+    </div>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

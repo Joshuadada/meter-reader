@@ -1,0 +1,25 @@
+.main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e3e3e3;
+}
+.login-container{
+    width: 350px;
+    max-width: 350px;
+    box-shadow: 0 0 3px #2424248a;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.login-container form{
+    width: 100%;
+}
+.logo{
+    width: 200px;
+    height: 80px;
+    display: block;
+    margin: auto;
+}
