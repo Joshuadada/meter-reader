@@ -34,9 +34,9 @@
     />
     <title>Dashboard - iobotech Meter</title>
   </head>
-  <body>
+  <body onload="loadYear()">
     <div class="container">
-      <div class="logout-alert alert alert-danger animate fade-in" id="logout-alert"><span class="close" id="close-logout-alert">x</span>Unable to log you out, please check your internet connection</div>
+      <!-- <div class="logout-alert alert alert-danger animate fade-in" id="logout-alert"><span class="close" id="close-logout-alert">x</span>Unable to log you out, please check your internet connection</div> -->
       <div class="j-d-flex j-align-center section-1 j-my-20">
         <a href="dashboard.html"
           ><img src="../assets/images/logo.png" alt="" class="logo"
@@ -124,7 +124,7 @@
           </div>
           <div class="bg-success j-card">
             <div class="j-d-flex j-align-center j-space-between">
-              <h5>Last Recharge Unit</h5>
+              <h5>Last Recharge Amount</h5>
               <div><strong>₦700</strong></div>
             </div>
           </div>
@@ -271,7 +271,13 @@
       </div>
 
       <div class="j-my-30 text-center">
-        &copy; Iobotech (2022)
+        &copy; Iobotech (<span id="year"></span>)
+        <script>
+          function loadYear(){
+            let d = new Date()
+            document.getElementById('year').innerText = d.getFullYear();
+          }
+        </script>
       </div>
 
       <div class="j-modal" id="j-modal">

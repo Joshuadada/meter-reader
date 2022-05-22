@@ -67,8 +67,7 @@ body{
     scroll-behavior: smooth;
 }
 .logo{
-    width: 60px;
-    height: 30px;
+    width: 120px;
 }
 .j-flex-wrap{
     flex-wrap: wrap;
@@ -94,6 +93,9 @@ body{
 }
 .show-j-modal{
     top: 100px;
+}
+textarea{
+    resize: none;
 }
 @media screen and (max-width: 768px){
     .j-d-none-tab{
